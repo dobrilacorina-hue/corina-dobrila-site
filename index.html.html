@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psiholog Corina Dobrilă</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --beige: #f7f3ef;
+      --nude: #e6d8cc;
+      --accent: #c7a98b;
+      --text: #3d3d3d;
+      --white: #ffffff;
+    }
+
+    * {margin:0; padding:0; box-sizing:border-box;}
+    html {scroll-behavior:smooth;}
+
+    body {
+      font-family:'Inter',sans-serif;
+      background:var(--beige);
+      color:var(--text);
+    }
+
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:20px 50px;
+      background:rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      position:fixed; width:100%; top:0; z-index:1000;
+    }
+
+    .logo {
+      display:flex; align-items:center; gap:10px;
+      font-family:'Playfair Display',serif;
+      font-size:20px;
+    }
+
+    .logo-icon {
+      width:35px; height:35px;
+      border-radius:50%;
+      background:var(--accent);
+      display:flex; align-items:center; justify-content:center;
+      color:white; font-weight:bold;
+    }
+
+    nav a {
+      margin-left:25px;
+      text-decoration:none;
+      color:var(--text);
+      position:relative;
+    }
+
+    nav a::after {
+      content:"";
+      position:absolute;
+      width:0%; height:1px;
+      background:var(--accent);
+      left:0; bottom:-5px;
+      transition:0.3s;
+    }
+
+    nav a:hover::after {width:100%;}
+
+    .hero {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:100vh;
+      align-items:center;
+      padding:140px 50px 50px;
+      gap:40px;
+    }
+
+    .hero h2 {
+      font-family:'Playfair Display',serif;
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .btn {
+      padding:12px 25px;
+      border:none;
+      background:var(--accent);
+      color:white;
+      border-radius:30px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover {transform:scale(1.05);}
+
+    .hero-image img {
+      width:100%;
+      height:450px;
+      object-fit:cover;
+      border-radius:20px;
+      display:block;
+    }
+
+    section {
+      padding:100px 50px;
+      max-width:1100px;
+      margin:auto;
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+
+    section.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    h3 {
+      font-family:'Playfair Display',serif;
+      font-size:30px;
+      margin-bottom:20px;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card {
+      background:var(--white);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px 18px;
+      border-radius:50%;
+      text-decoration:none;
+      font-size:20px;
+    }
+
+    iframe {
+      width:100%;
+      height:600px;
+      border:none;
+      border-radius:15px;
+    }
+
+    footer {
+      text-align:center;
+      padding:30px;
+      background:white;
+    }
+
+    @media(max-width:768px){
+      .hero {grid-template-columns:1fr; text-align:center;}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">CD</div>
+    Corina Dobrilă
+  </div>
+  <nav>
+    <a href="#acasa">Acasă</a>
+    <a href="#despre">Despre</a>
+    <a href="#servicii">Servicii</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="acasa">
+  <div>
+    <h2>Echilibru. Claritate. Sens.</h2>
+    <p>Un spațiu sigur pentru a înțelege și transforma experiența ta emoțională.</p>
+    
+  </div>
+  <div class="hero-image">
+    <img src="poza.jpg.jpeg" alt="Psiholog Corina Dobrilă">
+  </div>
+</section>
+
+<section id="despre">
+  <h3>Despre mine</h3>
+  <p>Sunt psiholog clinician autonom și lucrez cu copii, adolescenți și adulți în zona relațiilor și a reglării emoționale.
+
+Formarea mea include psihologie clinică, formare continuă în psihoterapie pozitivă (WAPP) și facilitare Circle of Security Parenting 
+
+În cabinet, mă interesează mai ales înțelegerea experienței personale și sprijinirea unor răspunsuri emoționale și relaționale mai clare și mai sigure.
+
+Lucrez într-o manieră integrativă, cu accent pe siguranță emoțională, atașament și resurse personale.</p>
+</section>
+
+<section id="servicii">
+  <h3>Servicii</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>Consiliere psihologică</h4>
+      <p>Intervenții pentru dificultăți emoționale.</p>
+    </div>
+    <div class="card">
+      <h4>Evaluare clinică</h4>
+      <p>Evaluări pentru copii și adolescenți.</p>
+    </div>
+    <div class="card">
+      <h4>Sprijin parental</h4>
+      <p>Consiliere pentru relația părinte-copil.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h3>Contact</h3>
+  <form onsubmit="trimiteMesaj(event)">
+    <input type="text" name="Nume" placeholder="Nume" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Mesaj" rows="5" placeholder="Mesaj" required></textarea>
+    <button class="btn">Trimite</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Psiholog Corina Dobrilă</p>
+  <div style="margin-top:20px;">
+    <a href="https://wa.me/40756532973" class="btn">Programează o ședință</a>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/40756532973" target="_blank">💬</a>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  function trimiteMesaj(e){
+    e.preventDefault();
+    alert("Mesaj trimis! Vei primi răspuns pe email 💌");
+  }
+</script>
+
+</body>
+</html>
