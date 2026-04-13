@@ -285,6 +285,46 @@ li {
   .about-content {
     gap: 40px;
   }
+}.contact {
+  background: #f8f5f0;
+  text-align: center;
+}
+
+.contact-subtitle {
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+
+  transition: all 0.3s ease;
+}
+
+.contact-card span {
+  font-size: 14px;
+  color: #888;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
   </style>
 </head>
@@ -405,14 +445,34 @@ li {
 
 
 
-<section id="contact">
-  <h3>Contact</h3>
-  <form onsubmit="trimiteMesaj(event)">
-    <input type="text" name="Nume" placeholder="Nume" required>
-    <input type="email" name="Email" placeholder="Email" required>
-    <textarea name="Mesaj" rows="5" placeholder="Mesaj" required></textarea>
-    <button class="btn">Trimite</button>
-  </form>
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <h2>Contact</h2>
+    <p class="contact-subtitle">Poți lua legătura cu mine direct prin:</p>
+
+    <div class="contact-links">
+
+      <a href="mailto:dobrilacorina@yahoo.com" class="contact-card">
+        📩 Email
+        <span>Trimite un mesaj</span>
+      </a>
+
+      <a href="https://instagram.com/psiholog.corinadobrila" target="_blank" class="contact-card">
+        📷 Instagram
+        <span>Vezi profilul meu</span>
+      </a>
+
+      <a href="https://facebook.com/USERNAME" target="_blank" class="contact-card">
+        👍 Facebook
+        <span>Pagina mea profesională</span>
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
 <footer>
